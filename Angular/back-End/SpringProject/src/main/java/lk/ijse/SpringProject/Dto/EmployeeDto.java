@@ -11,7 +11,7 @@ import lombok.ToString;
 @ToString
 public class EmployeeDto {
 
-    private String employeeId;
+    private int employeeId;
     private String employeeName;
     private String employeeAddress;
     private int mobile;

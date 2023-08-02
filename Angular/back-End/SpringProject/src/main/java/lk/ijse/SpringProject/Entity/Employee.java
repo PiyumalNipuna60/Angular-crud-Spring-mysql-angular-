@@ -17,8 +17,14 @@ public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String employeeId;
+    private int employeeId;
     private String employeeName;
     private String employeeAddress;
     private int mobile;
+
+    public Employee(String employeeName, String employeeAddress, int mobile) {
+        this.employeeName = employeeName;
+        this.employeeAddress = employeeAddress;
+        this.mobile = mobile;
+    }
 }

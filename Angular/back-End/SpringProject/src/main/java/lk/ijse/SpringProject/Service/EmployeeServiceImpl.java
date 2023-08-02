@@ -13,6 +13,13 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     public String save(@RequestBody EmployeeSaveDto dto) {
 
-       return null;
+        Employee employee = new Employee(
+                dto.getEmployeeName(),
+                dto.getEmployeeAddress(),
+                dto.getMobile()
+        );
+
+        Employee save = employeeRepo.save(employee);
+        return save.getEmployeeName();
     }
 }

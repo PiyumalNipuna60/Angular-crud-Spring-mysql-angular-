@@ -12,4 +12,6 @@ public interface EmployeeService {
     List<EmployeeDto> getAll();
 
     String update(EmployeeDto dt);
+
+    String delete(int employeeId);
 }

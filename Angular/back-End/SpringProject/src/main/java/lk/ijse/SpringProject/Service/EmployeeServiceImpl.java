@@ -66,4 +66,16 @@ public class EmployeeServiceImpl implements EmployeeService {
         }
         return text;
     }
+
+    @Override
+    public String delete(int id) {
+        String text=null;
+        if (employeeRepo.existsById(id)){
+            employeeRepo.deleteById(id);
+            text="Delete Employee";
+        }else {
+            text="not find by Employee ID..!";
+        }
+        return text;
+    }
 }

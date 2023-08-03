@@ -39,6 +39,7 @@ public class EmployeeController {
     @DeleteMapping(path = "/delete/{employeeId}")
     public String deleteEmployee(@PathVariable(value = "employeeId")int id){
 //        String delete = employeeService.delete(employeeDto.getEmployeeId());
+//        String delete = employeeService.delete(id);
         String delete = employeeService.delete(id);
         return delete;
     }

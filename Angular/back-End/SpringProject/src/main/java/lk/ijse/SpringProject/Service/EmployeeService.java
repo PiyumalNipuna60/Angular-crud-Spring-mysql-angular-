@@ -10,4 +10,6 @@ public interface EmployeeService {
     String add(EmployeeSaveDto dto);
 
     List<EmployeeDto> getAll();
+
+    String update(EmployeeDto dt);
 }

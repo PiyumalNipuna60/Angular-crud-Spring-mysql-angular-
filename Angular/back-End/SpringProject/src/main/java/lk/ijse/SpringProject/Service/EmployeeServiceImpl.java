@@ -48,4 +48,22 @@ public class EmployeeServiceImpl implements EmployeeService {
 
         return EmployeeList;
     }
+
+    @Override
+    public String update(EmployeeDto dto) {
+        String text=null;
+        if (employeeRepo.existsById(dto.getEmployeeId())){
+            Employee byId = employeeRepo.getById(dto.getEmployeeId());
+
+            byId.setEmployeeName(dto.getEmployeeName());
+            byId.setEmployeeAddress(dto.getEmployeeAddress());
+            byId.setMobile(dto.getMobile());
+
+            employeeRepo.save(byId);
+            text=byId.getEmployeeName();
+        }else {
+            text="not find by Employee ID..!";
+        }
+        return text;
+    }
 }

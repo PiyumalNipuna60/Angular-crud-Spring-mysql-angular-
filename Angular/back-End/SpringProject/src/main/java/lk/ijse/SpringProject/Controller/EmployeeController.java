@@ -29,4 +29,10 @@ public class EmployeeController {
         List<EmployeeDto> AllEmployee=employeeService.getAll();
         return AllEmployee;
     }
+
+    @PutMapping("/update")
+    public String updateEmployee(@RequestBody EmployeeDto employeeDto){
+        String id=employeeService.update(employeeDto);
+        return id;
+    }
 }

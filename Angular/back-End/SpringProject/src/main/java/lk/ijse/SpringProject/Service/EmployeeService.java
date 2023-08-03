@@ -1,10 +1,13 @@
 package lk.ijse.SpringProject.Service;
 
+import lk.ijse.SpringProject.Dto.EmployeeDto;
 import lk.ijse.SpringProject.Dto.EmployeeSaveDto;
-import org.springframework.web.bind.annotation.RequestBody;
+
+import java.util.List;
 
 public interface EmployeeService {
 
+    String add(EmployeeSaveDto dto);
 
-     String save(EmployeeSaveDto dto);
+    List<EmployeeDto> getAll();
 }
